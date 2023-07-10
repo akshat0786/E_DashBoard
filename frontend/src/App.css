@@ -7,23 +7,45 @@
   display: inline-block;
   padding: 20px;
 }
-.inputBox{
+.inputBox {
   display: block;
-  border: solid rgb(113, 205, 239) 1px ;
+  border: solid rgb(113, 205, 239) 1px;
   padding: 10px;
-  margin: auto; 
+  margin: auto;
   margin-top: 30px;
   border-radius: 4px;
 }
 
-.register{
-  display:flex-row;
+.err-msg {
+  color: red;
+  margin-right: 83px;
+  font-size: small;
+}
+
+.register {
+  display: flex-row;
   margin-top: 100px;
   text-align: center;
   align-items: center;
 }
+.product-list {
+  text-align: center;
+  margin-top: 50px;
+}
 
-.form-btn{
+.product-list ul {
+  margin: 0;
+}
+
+.product-list ul li {
+  display: inline-block;
+  border: 1px solid rgb(113, 205, 239);
+  padding: 5px;
+  width: 150px;
+}
+
+
+.form-btn {
   padding: 10px;
   margin: 20px;
   background-color: #4ed0f8;
@@ -33,7 +55,7 @@
   width: 80px;
 }
 
-.form-btn:hover{
+.form-btn:hover {
   background-color: #01b2e8;
   box-shadow: 2px 2px 1px black;
 }
@@ -102,7 +124,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 .logo {
   width: 50px;
