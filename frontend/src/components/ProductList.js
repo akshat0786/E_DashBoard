@@ -29,6 +29,7 @@ const ProductList = () => {
         <li>S. No</li>
         <li>Name</li>
         <li>Price</li>
+        <li>company</li>
         <li>Category</li>
         <li>Operation</li>
       </ul>
@@ -37,6 +38,7 @@ const ProductList = () => {
           <li>{index + 1}</li>
           <li>{item.name}</li>
           <li>Rs {item.price}</li>
+          <li>{item.company}</li>
           <li>{item.category}</li>
           <li>
             <button onClick={() => deleteProduct(item._id)}>Delete</button>
