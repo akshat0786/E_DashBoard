@@ -2,20 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-
   //using hooks
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   //use effect hook to cannot navigate to login page after loggedin
-  useEffect(()=> {
-    const auth = localStorage.getItem('user');
-    if(auth) {
-        navigate('/')
+  useEffect(() => {
+    const auth = localStorage.getItem("user");
+    if (auth) {
+      navigate("/");
     }
-  })
-
+  });
 
   //fetching api thorugh post method storing result in local storage else alert invalid credentials
   const handleLogin = async () => {
@@ -30,8 +28,9 @@ const Login = () => {
 
     result = await result.json();
     console.warn(result);
-    if (result.name) {
-      localStorage.setItem("user", JSON.stringify(result));
+    if (result.auth) {
+      localStorage.setItem("user", JSON.stringify(result.user));
+      localStorage.setItem("token", JSON.stringify(result.auth));
       navigate("/");
     } else {
       alert("Invalid Credentials");
